@@ -48,6 +48,13 @@ module.exports = {
       },
     ],
     'prettier/prettier': ['error', prettierOptions],
-    'padding-line-between-statements': [2, { blankLine: 'always', prev: '*', next: 'return' }],
+    'padding-line-between-statements': [
+      2,
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: '*', next: 'block' },
+      { blankLine: 'always', prev: 'block', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+    ],
   },
 };
